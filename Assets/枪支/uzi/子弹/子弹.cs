@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace 命名空间_弓箭
-{
+
     public class 子弹 : MonoBehaviour
     {
 
         //弓箭移动速度
-        private float 移动速度 = 1f;
+        private float 移动速度 = 10f;
 
         //超时删除
         private float 存在时间 = 10f;
@@ -47,7 +46,7 @@ namespace 命名空间_弓箭
 
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             定时器 -= Time.deltaTime;
 
@@ -74,12 +73,16 @@ namespace 命名空间_弓箭
             }
 
             //与墙碰撞
+            /*
             if (other.tag == 标签.标签_墙.ToString())
             {
                 爆炸();
             }
+            */
 
             //与玩家碰撞
+
+            /*
             if (other.tag == 标签.标签_玩家.ToString())
             {
                 //发送伤害消息
@@ -92,6 +95,7 @@ namespace 命名空间_弓箭
                 //
                 爆炸();
             }
+            */
 
 
         }
@@ -121,4 +125,3 @@ namespace 命名空间_弓箭
 
     }//弓箭
 
-}//命名空间_弓箭
